@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+
+:root {
+  --background-color-light: #ffffff;
+  --background-color-light-secondary: #f0f0f0;
+  --background-color-dark: #1a1a1a;
+  --background-color-dark-secondary: #353535;
+  --text-color-light: #000000;
+  --text-color-dark: #ffffff;
+  --primary-color-light: #d7d7d7;
+  --primary-color-dark: #6e6e6e;
+  --border-color-light: #ddd;
+  --border-color-dark: #333;
+}
+
+body.light-theme {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--background-color-light-secondary);
+  color: var(--text-color-light);
+}
+
+body.dark-theme {
+  background-color: var(--background-color-dark-secondary);
+  color: var(--text-color-dark);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  background: var(--background-color-light);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+  max-width: 90%;
+  width: 400px;
+}
+
+body.dark-theme .container {
+  background: var(--background-color-dark);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+select,
+button {
+  font-family: "Rubik", sans-serif;
+  padding: 15px;
+  margin: 12px 0;
+  font-size: 16px;
+  border: 1px solid var(--border-color-light);
+  border-radius: 5px;
+  background-color: var(--primary-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.dark-theme select,
+body.dark-theme button {
+  border: 1px solid var(--border-color-dark);
+  background-color: var(--primary-color-dark);
+  color: var(--text-color-dark);
+}
+
+#clock {
+  font-size: 2em;
+  margin-top: 20px;
+}
